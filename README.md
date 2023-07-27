@@ -18,3 +18,9 @@
     - so you have to traverse the list to find the previous node and link that to the next one
   - inserting in the middle is also harder -> because you have to traverse the list in order to find the place where you want to insert it
     - same issue with a doubly-linked list O(n)
+
+## ANALYSIS OF ALGORITHMS
+
+## Sorting
+
+### Elementary sorts
