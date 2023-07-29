@@ -4,11 +4,14 @@
 - How many steps does it take to execute a program. How will an algorithm performance change as the data increases?
 - We drop al constants
 - Worst is case is usually the way we measure,
+- loop -> linear O(n)
+- halving -> O(logN)
 
 ## SEARCH
 - if you half the input at each step, its likely O(logN) or O(NlogN)
   - Binary search
     - `low` is always inclusive, `High` is always exclusive -> n+1
+- Binary search is O(logN)
 
 
 ## Abstract DATA Type
