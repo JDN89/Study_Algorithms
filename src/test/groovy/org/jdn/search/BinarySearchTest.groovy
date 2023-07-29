@@ -18,4 +18,18 @@ class BinarySearchTest extends Specification {
         1      | 0
         69420  | 10
     }
+
+    def "We return -1 when the needle is not present in the haystack"() {
+
+        given:
+        int[] foo = [1, 3, 4, 69, 71, 81, 90, 99, 420, 1337, 69420]
+        expect:
+        BinarySearch.search(foo, target) == result
+
+        where:
+        target | result
+        444    | -1
+        555    | -1
+        666    | -1
+    }
 }
