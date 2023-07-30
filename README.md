@@ -14,6 +14,21 @@
 - Binary search is O(logN)
 
 
+## SORTING
+- bubble sort O(N^2)
+### doubly linkedList
+- getting head or tail and removing and inserting these positions is constant time
+- inserting or deleting in the middle is slow -> you have to traverse the linked-list to get to the right node
+- no continuous chunk of memory like an array, so no indexes
+- instead you have references that point to the next and previous node
+- use a linked list when it's not necessary to TRAVERSE it
+
+### QUEUE: FIFO
+- enqueue
+- dequeue
+- peek (check what's head)
+
+
 ## Abstract DATA Type
 - Assigning one reference to another is known as aliasing
 - default no args constructor initializes instance variables to it's default values
