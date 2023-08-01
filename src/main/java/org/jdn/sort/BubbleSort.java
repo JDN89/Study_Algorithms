@@ -1,5 +1,8 @@
 package org.jdn.sort;
 
+//public class BubbleSort {
+//
+//}
 // loop over array
 // inner loop is j+1
 // if i > j+1 swap
