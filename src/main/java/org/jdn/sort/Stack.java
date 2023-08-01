@@ -12,10 +12,6 @@ class SNode<T> {
         return value;
     }
 
-    public void setValue(T value) {
-        this.value = value;
-    }
-
     public SNode<T> getPrevious() {
         return previous;
     }
@@ -44,8 +40,7 @@ public class Stack<T> {
     }
 
     public T pop() {
-        if(head == null)
-        {
+        if (head == null) {
             return null;
         }
 
@@ -61,6 +56,7 @@ public class Stack<T> {
     public T peek() {
         return this.head.value;
     }
+
     public int size() {
         return this.length;
     }
