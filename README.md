@@ -28,6 +28,13 @@
 - dequeue
 - peek (check what's head)
 
+### Stack LIFO
+- 
+
+## ARRAYS
+- Linked List is hard for traversing but easy for removing and inserting at beginning and end
+  -Linked List: When you require frequent insertions and deletions, and these are more important than random access.
+- array
 
 ## Abstract DATA Type
 - Assigning one reference to another is known as aliasing
