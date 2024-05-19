@@ -1,5 +1,16 @@
 # AGORITHMS
 
+## Resources:
+[Algorithms, 4th Edition](https://algs4.cs.princeton.edu/home/)
+[Course by the primeAgen](https://frontendmasters.com/courses/algorithms/)
+[grind 75](https://www.techinterviewhandbook.org/grind75)
+
+## Goal
+As a self-taught developer, I need to master at least the basics of data structures and algorithms. To achieve this, I'll read the "Algorithms" book (written in Java) and watch the corresponding videos from The Primagen course (in JavaScript). Then, I'll implement the algorithms in both C and Rust. Why C and Rust? Because I'm learning these languages and want to explore how Rust enhances and improves upon C.
+
+I might subscribe to leetcode for a month and post the puzzle solutions here.
+
+
 ## Basics
 
 - How many steps does it take to execute a program. How will an algorithm performance change as the data increases?
