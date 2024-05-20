@@ -10,6 +10,52 @@ As a self-taught developer, I need to master at least the basics of data structu
 
 I might subscribe to leetcode for a month and post the puzzle solutions here.
 
+## Data Structures
+
+| Data Structure       | Read         | Write        | Update       | Delete       |
+|----------------------|--------------|--------------|--------------|--------------|
+| Array                | O(1)         | O(1)         | O(1)         | O(N)         |
+| Dynamic Array (e.g., Vector in C++)| O(1) (amortized)| O(1) (amortized)| O(1) (amortized)| O(N) |
+| Singly Linked List   | O(N)         | O(1)         | O(N)         | O(N)         |
+| Doubly Linked List   | O(N)         | O(1)         | O(N)         | O(N)         |
+| Hash Table           | O(1) (average)| O(1) (average)| O(1) (average)| O(1) (average) |
+| Binary Search Tree   | O(log N)     | O(log N)     | O(log N)     | O(log N)     |
+| AVL Tree             | O(log N)     | O(log N)     | O(log N)     | O(log N)     |
+| Red-Black Tree       | O(log N)     | O(log N)     | O(log N)     | O(log N)     |
+| B-Tree               | O(log N)     | O(log N)     | O(log N)     | O(log N)     |
+| Skip List            | O(log N)     | O(log N)     | O(log N)     | O(log N)     |
+| Queue (Array-based)  | O(1)         | O(1)         | O(1)         | O(N)         |
+| Queue (Linked List)  | O(N)         | O(1)         | O(N)         | O(N)         |
+| Stack (Array-based)  | O(1)         | O(1)         | O(1)         | O(N)         |
+| Stack (Linked List)  | O(N)         | O(1)         | O(N)         | O(N)         |
+| Priority Queue (Binary Heap) | O(1) | O(log N)    | O(log N)     | O(log N)
+
+| Data Structure | Advantages                                                                                       |
+|----------------|--------------------------------------------------------------------------------------------------|
+| Array          | - **Fast Random Access**: Elements can be accessed directly by index.                            |
+|                | - **Cache Locality**: Contiguous memory storage enhances cache performance.                       |
+|                | - **Efficient Index-based Operations**: Suitable for algorithms like binary search or sorting.   |
+|                | - **Fixed-size Collections**: Ideal for scenarios with a known and fixed number of elements.      |
+|                | - **Simple Implementation**: Arrays are straightforward to implement and widely supported.       |
+| Linked List    | - **Dynamic Size**: Can easily grow or shrink without needing to preallocate memory.               |
+|                | - **Efficient Insertions and Deletions**: Adding or removing elements is fast, especially in the middle of the list. |
+|                | - **Memory Efficiency with Variable Length Elements**: Each element can have a different size, reducing memory wastage. |
+|                | - **Ordered Data with Frequent Modifications**: Preserves the order of elements with ease.        |
+|                | - **No Random Access Requirement**: Ideal for sequential traversal or when index-based access is not needed. |
+| Hash Table     | - **Fast Lookups by Key**: Provides constant-time access to elements based on a unique key.       |
+|                | - **Efficient Insertions and Deletions**: Average-case time complexity for basic operations is O(1). |
+|                | - **Suitable for Unordered Collections**: Does not impose any particular order on the elements.   |
+|                | - **Dynamic Dataset with Unknown Size**: Can handle dynamic growth and shrinkage efficiently.      |
+|                | - **Effective Collision Handling**: Hash tables handle collisions effectively with various collision resolution techniques. |
+| Stack          | - **LIFO (Last-In, First-Out) Principle**: Useful for managing function calls, expression evaluation, and undo mechanisms. |
+|                | - **Simple Operations**: Only two fundamental operations (push and pop) are required, making them easy to use and understand. |
+|                | - **Memory Efficiency**: Typically implemented using arrays or linked lists with minimal memory overhead. |
+|                | - **Dynamic Size**: Can grow or shrink as needed, making them suitable for a variety of applications. |
+| Queue          | - **FIFO (First-In, First-Out) Principle**: Useful for managing tasks, scheduling, and resource sharing. |
+|                | - **Simple Operations**: Fundamental operations (enqueue and dequeue) are straightforward and efficient. |
+|                | - **Memory Efficiency**: Can be implemented using arrays or linked lists with minimal memory overhead. |
+|                | - **Dynamic Size**: Can grow or shrink as needed, accommodating varying numbers of elements. |
+
 
 ## Basics
 
