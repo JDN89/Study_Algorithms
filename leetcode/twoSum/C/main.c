@@ -4,6 +4,27 @@
 //  and you may not use the same element twice
 //      You can return the answer in any order.
 
+// NOTE:
+// give array: [3,2,4] and target 6
+// [] -> size 6
+// LOOP 1
+// v:3 i:0 diff 3
+// [x,x,x,0]
+// LOOP 2:
+// v:2 i:1 diff 4
+// [x,x,x,0,1]
+// LOOP 3 -> index 2
+// v:4 i:2 diff 2
+// we check if we find a value at index 4 if so we have found the twoSum target
+// [x,x,2,0,1]
+
+// we create an empty array were we store the numbers we itterated over
+// if the num is bigger then the target we return early, because the size of our
+// array is equal to the size of our target if the num i we use the value of the
+// number as the index position in the new array where we store the original
+// index if we we go over the numbers one by one
+//
+
 // create arr of numsSize;
 // for i ...
 // if nums[i] =
@@ -14,7 +35,7 @@
 
 int *twoSum(int *nums, int numsSize, int target, int *returnSize) {
 
-  int i, temp;
+  int temp;
   int *ptr = nums;
 
   int *result = (int *)malloc(2 * sizeof(int));
@@ -24,24 +45,20 @@ int *twoSum(int *nums, int numsSize, int target, int *returnSize) {
   int s[target];
 
   for (int i = 0; i < numsSize; i++) {
+    if (*ptr > target) {
+      return 0;
+    }
+
     temp = target - *ptr;
 
-    if (s[temp] == 1) {
+    if (s[temp] >= 0 && s[temp] < target) {
 
       *returnSize = 2;
-      // -1 because 0 based index
-      // BUG: we don't return the correct indexestemp
-      printf("temp %d \n", temp);
-      printf("index of temp %d \n", nums[temp]);
-      result[0] = nums[s[temp]];
+      result[0] = s[temp];
       result[1] = i;
       return result;
 
     } else {
-      printf("%d - i \n", i);
-
-      // NOTE: store index of value in nums in the s(earch) array retrieve index
-      // BUG: this logic is not working for now
       s[*ptr] = i;
 
       *returnSize = 0;
