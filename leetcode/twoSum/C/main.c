@@ -40,30 +40,45 @@ int *twoSum(int *nums, int numsSize, int target, int *returnSize) {
 
   int *result = (int *)malloc(2 * sizeof(int));
 
-  printf("%d = numsize \n", numsSize);
+  if (target == 0) {
+    int s[numsSize];
 
-  int s[target];
+    for (int i = 0; i < numsSize; i++) {
+      if (*ptr == 0) {
+        printf("i : %d", i);
 
-  for (int i = 0; i < numsSize; i++) {
-    if (*ptr > target) {
-      return 0;
+        return 0;
+      }
     }
+  }
 
-    temp = target - *ptr;
+  else {
 
-    if (s[temp] >= 0 && s[temp] < target) {
+    int s[target];
 
-      *returnSize = 2;
-      result[0] = s[temp];
-      result[1] = i;
-      return result;
+    for (int i = 0; i < numsSize; i++) {
+      if (*ptr > target) {
+        return 0;
+      }
 
-    } else {
-      s[*ptr] = i;
+      // Note when target is 0
 
-      *returnSize = 0;
+      temp = target - *ptr;
+
+      if (s[temp] >= 0 && s[temp] < target) {
+
+        *returnSize = 2;
+        result[0] = s[temp];
+        result[1] = i;
+        return result;
+
+      } else {
+        s[*ptr] = i;
+
+        *returnSize = 0;
+      }
+      ptr++;
     }
-    ptr++;
   }
   return result;
 }
@@ -71,9 +86,9 @@ int *twoSum(int *nums, int numsSize, int target, int *returnSize) {
 int main() {
   // int nums[] = {2, 7, 11, 15};
   // int target = 9;
-  int nums[] = {3, 2, 4};
-
-  int target = 6;
+  // int nums[] = {3, 2, 4};
+  int nums[] = {0, 4, 3, 0};
+  int target = 0;
   int size = sizeof(nums) / sizeof(int);
   int returnSize;
   int *result = twoSum(nums, size, target, &returnSize);
