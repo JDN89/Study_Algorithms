@@ -41,13 +41,16 @@ int *twoSum(int *nums, int numsSize, int target, int *returnSize) {
   int *result = (int *)malloc(2 * sizeof(int));
 
   if (target == 0) {
-    int s[numsSize];
+    // int s[numsSize];
 
+      int resultIndex = 0;
     for (int i = 0; i < numsSize; i++) {
-      if (*ptr == 0) {
-        printf("i : %d", i);
 
-        return 0;
+      if (nums[i] == 0) {
+        printf("i: %d \n", i);
+        result[resultIndex] = i;
+        printf("resultIndex: %d \n", resultIndex);
+        resultIndex++;
       }
     }
   }
