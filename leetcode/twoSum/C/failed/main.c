@@ -87,10 +87,8 @@ int *twoSum(int *nums, int numsSize, int target, int *returnSize) {
 }
 
 int main() {
-  // int nums[] = {2, 7, 11, 15};
-  // int target = 9;
   // int nums[] = {3, 2, 4};
-  int nums[] = {0, 4, 3, 0};
+  int nums[] = {-3, 4, 3, 0};
   int target = 0;
   int size = sizeof(nums) / sizeof(int);
   int returnSize;

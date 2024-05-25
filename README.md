@@ -32,3 +32,13 @@ I might subscribe to leetcode for a month and post the puzzle solutions here.
         - `low` is always inclusive, `High` is always exclusive -> n+1
 - Binary search is O(logN)
 
+## LEETCODE lessons:
+
+#### TWOSUM:
+
+I attempted to solve the two-sum problem in C by using the value of each number as the index in a temporary array, with the index becoming the value in this array. This approach worked until I encountered negative numbers. I was initially reluctant to learn how to implement a hashtable in C, but I've realized that it's essential for overcoming this challange.
+I kept the non working solution -> 'negative numbers failure'
+
+resource hashtable in C:
+[Crafting interpreters - Chapter 20](https://craftinginterpreters.com/hash-tables.html)
+[Jacob Sorber](https://www.youtube.com/watch?v=2Ti5yvumFTU&t=1084s&ab_channel=JacobSorber)
