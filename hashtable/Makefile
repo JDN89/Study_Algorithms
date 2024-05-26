@@ -5,7 +5,7 @@ CC = gcc
 CFLAGS = -Wall -Wextra -g
 
 # Source files
-SOURCES = main.c
+SOURCES = main.c table.c memory.c
 
 # Target executable
 EXECUTABLE = hashtable
