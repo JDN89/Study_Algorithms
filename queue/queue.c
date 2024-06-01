@@ -1,4 +1,6 @@
+#include <cstddef>
 #include <stdbool.h>
+#include <stddef.h>
 #include <stdio.h>
 #include <stdlib.h>
 
@@ -49,7 +51,10 @@ QueueResult deQueue(Queue *q) {
     return result;
   }
   Node *temp = q->head;
+  // set head to next value
   q->head = q->head->next;
+  // if the new head is null, then there is also no tail anymore -> so tail =
+  // null
   if (q->head == NULL) {
     q->tail = NULL;
   }
