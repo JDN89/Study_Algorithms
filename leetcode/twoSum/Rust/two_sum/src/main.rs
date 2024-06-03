@@ -5,15 +5,12 @@ pub fn two_sum(nums: Vec<i32>, target: i32) -> Vec<i32> {
     let mut my_map: HashMap<i32, i32> = HashMap::new();
 
     for (index, num) in nums.iter().enumerate() {
-        println!("{:?}", num);
         let temp = target - num;
         if let Some(value) = my_map.get(&temp) {
-            println!("{:?}", value);
             result.push(*value);
             result.push(index.try_into().unwrap());
         } else {
             my_map.insert(*num, index.try_into().unwrap());
-            println!("{:?}", my_map)
         }
     }
 

@@ -17,6 +17,13 @@ I might subscribe to leetcode for a month and post the puzzle solutions here.
 - [More detailed cheat sheet](https://bigocheatsheet.io/)
 - [Help for when you're stuck implementing data structures](https://www.youtube.com/watch?v=VOpjAHCee7c&list=PL9IEJIKnBJjFiudyP6wSXmykrn67Ykqib&ab_channel=JacobSorber)
 
+#### Hashtable
+A table with __key-value__ pairs allows us to look up a value based on a given key. We use a hash function to convert a key into a result, which serves as the index for storing the value. This hash function must always produce the same output for the same key, distribute keys widely to minimize collisions, and be fast.
+
+load factor: number of items in table/ #slots. It helps to determine when you have to resize your table.
+
+In case of a collision, we resolve it using open addressing with linear probing (one of the simplest techniques). If a bucket is already occupied, we check the next entry until we find an empty one.
+
 ## Basics
 
 - How many steps does it take to execute a program. How will an algorithm performance change as the data increases?
@@ -42,3 +49,5 @@ I kept the non working solution -> 'negative numbers failure'
 resource hashtable in C:
 [Crafting interpreters - Chapter 20](https://craftinginterpreters.com/hash-tables.html)
 [Jacob Sorber](https://www.youtube.com/watch?v=2Ti5yvumFTU&t=1084s&ab_channel=JacobSorber)
+
+
