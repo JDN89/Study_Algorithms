@@ -39,7 +39,6 @@ void push(Stack *stack, char c) {
 
 char pop(Stack *stack) {
   if (isEmpty(stack)) {
-    printf("stack underflow!");
     exit(1);
   }
   char topChar = stack->items[stack->top];
@@ -47,25 +46,16 @@ char pop(Stack *stack) {
   return topChar;
 }
 
-void printStack(Stack *stack) {
-  char *pointer = stack->items;
-  printf("char - %c \n", *pointer);
-  pointer++;
-}
-
 bool isValid(char *s, Stack *stack) {
   // NOTE: or just create an array of char str[strlen(s)]; and set top to -1;
   // then to the underlyings executions with some refactoring... decrease head
   // in case of pop
   for (int i = 0; s[i] != '\0'; i++) {
-    printStack(stack);
-    printf("char -- %c \n", s[i]);
     if (s[i] == '(') {
       push(stack, ')');
     } else if (s[i] == '[') {
       push(stack, ']');
     } else if (s[i] == '{') {
-      printf("recognized { \n");
       push(stack, '}');
     } else if (s[i] == ')' || s[i] == ']' || s[i] == '}') {
       if (isEmpty(stack) || pop(stack) != s[i]) {
