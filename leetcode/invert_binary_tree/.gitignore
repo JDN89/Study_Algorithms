@@ -1,0 +1,27 @@
+# Object files
+*.o
+
+# Libraries
+*.a
+*.so
+
+# Executable files
+*.exe
+*.out
+
+# Debug files
+*.dSYM/
+
+# Log files
+*.log
+
+# Dependency files
+*.dep
+*.d
+
+# Build directory
+build/
+dist/
+
+# Swap files
+*.swp
