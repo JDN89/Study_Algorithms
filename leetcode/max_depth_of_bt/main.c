@@ -1,5 +1,37 @@
+//
+// //
+// FUNCTION maxDepth(root):
+//     IF root IS NULL:
+//         RETURN 0
+//
+//     // Initialize queue for level order traversal
+//     CREATE queue
+//     ADD root TO queue
+//     SET depth TO 0
+//
+//     WHILE queue IS NOT EMPTY:
+//         // Number of nodes at current level
+//         SET levelSize TO SIZE OF queue
+//
+//         // Process all nodes at the current level
+//         FOR i FROM 0 TO levelSize - 1:
+//             // Get the front node in the queue
+//             SET node TO DEQUEUE from queue
+//
+//             // Enqueue the left child if it exists
+//             IF node.left IS NOT NULL:
+//                 ENQUEUE node.left TO queue
+//
+//             // Enqueue the right child if it exists
+//             IF node.right IS NOT NULL:
+//                 ENQUEUE node.right TO queue
+//
+//         // Increment depth since we finished processing one level
+//         INCREMENT depth
+//
+//     RETURN depth
+//
 // QUeue is FIFO
-
 #include <stdlib.h>
 
 typedef struct TreeNode {
