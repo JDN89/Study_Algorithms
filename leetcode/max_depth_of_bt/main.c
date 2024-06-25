@@ -1,40 +1,7 @@
-//
-// //
-// FUNCTION maxDepth(root):
-//     IF root IS NULL:
-//         RETURN 0
-//
-//     // Initialize queue for level order traversal
-//     CREATE queue
-//     ADD root TO queue
-//     SET depth TO 0
-//
-//     WHILE queue IS NOT EMPTY:
-//         // Number of nodes at current level
-//         SET levelSize TO SIZE OF queue
-//
-//         // Process all nodes at the current level
-//         FOR i FROM 0 TO levelSize - 1:
-//             // Get the front node in the queue
-//             SET node TO DEQUEUE from queue
-//
-//             // Enqueue the left child if it exists
-//             IF node.left IS NOT NULL:
-//                 ENQUEUE node.left TO queue
-//
-//             // Enqueue the right child if it exists
-//             IF node.right IS NOT NULL:
-//                 ENQUEUE node.right TO queue
-//
-//         // Increment depth since we finished processing one level
-//         INCREMENT depth
-//
-//     RETURN depth
-//
-// QUeue is FIFO
 #include <stdbool.h>
 #include <stdio.h>
 #include <stdlib.h>
+#include <time.h>
 
 typedef struct TreeNode {
   int val;
@@ -58,6 +25,7 @@ bool isQueueEmpty(Queue *q) { return q->head == NULL; }
 void initQueue(Queue *q) {
   q->head = NULL;
   q->tail = NULL;
+  q->size = 0;
 }
 
 // tail not null -> attach to tail
@@ -65,14 +33,16 @@ void initQueue(Queue *q) {
 void enqueue(Queue *q, TreeNode *node) {
   QueueNode *newNode = malloc(sizeof(QueueNode));
   newNode->node = node;
+  newNode->next = NULL;
   if (q->tail != NULL) {
     q->tail->next = newNode;
     q->tail = newNode;
   }
-  if (q->head == NULL) {
+
+  else {
     q->tail = q->head = newNode;
   }
-  q->size += 1;
+  q->size++;
 }
 
 TreeNode *dequeueu(Queue *q) {
@@ -87,7 +57,7 @@ TreeNode *dequeueu(Queue *q) {
 
   TreeNode *node = temp->node;
   free(temp);
-  q->size -= 1;
+  q->size--;
   return node;
 }
 
@@ -119,13 +89,36 @@ int maxDepth(struct TreeNode *root) {
     for (int i = 0; i < levelSize; i++) {
 
       TreeNode *head = dequeueu(&q);
-      if (head->left != NULL) {
-        enqueue(&q, head->left);
-      }
-      if (head->right != NULL) {
-        enqueue(&q, head->right);
+      if (head != NULL) {
+
+        if (head->left != NULL) {
+          enqueue(&q, head->left);
+        }
+        if (head->right != NULL) {
+          enqueue(&q, head->right);
+        }
       }
     }
   }
   return depth;
+}
+
+int main() {
+  TreeNode *root = malloc(sizeof(TreeNode));
+  root->val = 1;
+  root->left = malloc(sizeof(TreeNode));
+  root->right = malloc(sizeof(TreeNode));
+  root->right->val = 2;
+
+  printf("Maximum depth of the binary tree is: %d\n", maxDepth(root));
+
+  // Test the print_queue function
+  Queue q;
+  initQueue(&q);
+  enqueue(&q, root);
+  enqueue(&q, root->left);
+  enqueue(&q, root->right);
+  print_queue(&q);
+
+  return 0;
 }
