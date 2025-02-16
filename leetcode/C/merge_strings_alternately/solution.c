@@ -2,6 +2,9 @@
 #include "string.h"
 #include <stdlib.h>
 
+// Crux: 2 woorden zelfde lengte i += 2 insert in str
+// omdat je altijd een index oversltaat
+// van zodra dat 2 woorden niet dezelfde lengte hebben zal i += 1 worden
 char *mergeAlternately(char *word1, char *word2) {
   size_t lengthWord1 = 0;
   size_t lengthWord2 = 0;
