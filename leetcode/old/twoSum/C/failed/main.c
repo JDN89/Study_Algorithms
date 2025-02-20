@@ -43,7 +43,7 @@ int *twoSum(int *nums, int numsSize, int target, int *returnSize) {
   if (target == 0) {
     // int s[numsSize];
 
-      int resultIndex = 0;
+    int resultIndex = 0;
     for (int i = 0; i < numsSize; i++) {
 
       if (nums[i] == 0) {
