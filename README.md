@@ -9,9 +9,9 @@
 - [Neetcode](https://neetcode.io/roadmap)
 
 ## Goal
-As a self-taught developer, I need to master at least the basics of data structures and algorithms. To achieve this, I'll read the "Algorithms" book (written in Java) and watch the corresponding videos from The Primagen course (in JavaScript). Then, I'll implement the algorithms in both C and Rust. Why C and Rust? Because I'm learning these languages and want to explore how Rust enhances and improves upon C.
+As a self taught developer I haven't gotten a deep understanding of data structures yet. This is something I need to learn, because how else can I write fast code, when I don't know which data stucture to use in which situation.
 
-I might subscribe to leetcode for a month and post the puzzle solutions here.
+I'll implement the data structure in C, because it gives me a deeper understaning of the inner workings of the structure.
 
 ## Data Structures
 
