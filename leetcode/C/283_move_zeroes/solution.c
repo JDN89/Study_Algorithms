@@ -1,8 +1,5 @@
 #include "solution.h"
 
-// reutrn earley if numsSize is 0 or 1 or nums == 0
-// loop over array and if you encounter a 0 , insert it at end of array
-// with each move doe numsSize -1  -number move
 #include <stdio.h>
 #include <stdlib.h>
 
@@ -11,13 +8,19 @@ void moveZeroes(int *nums, int numsSize) {
     return;
   }
 
-  // when you encounter non zero -> move forward
-  // for over arr
-  // if (arr[i] != 0) { arr[insertedPos++] = arr[i]}
-  // er zal een verschil zijn tss insertedPos en nums[i] want inserted increased
-  // enkel voor niet 0 vul wat er overblijft op met 0 values 1,0,4,0,0 [1],...
-  // nums[insertedpos ++] -> access at 0 and THEN increase
-  // 1,[0] -> nothing
-  // 1,0,[4] 0> insertedpos == 1  \\ i == 2
-  //
+  // We houden de index bij van de laatste niet 0 waarde.
+  // zolang we 0 blijven tegenkomen increasen we dit niet.
+  // als i niet gelijk is aan lastNonZeroIndex zetten we nums[i] op 0
+  int lastNonZeroIndex = 0;
+
+  for (int i = 0; i < numsSize; i++) {
+    if (nums[i] != 0) {
+      nums[lastNonZeroIndex] = nums[i];
+      // als i niet gelijk is aan lastNonZeroIndex, zetten we i op 0
+      if (i != lastNonZeroIndex) {
+        nums[i] = 0;
+      }
+      lastNonZeroIndex++;
+    }
+  }
 }
