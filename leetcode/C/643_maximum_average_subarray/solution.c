@@ -1,4 +1,6 @@
 #include "solution.h"
+#include <math.h>
+#include <stdio.h>
 
 // gebruik sliding window
 // size 0 of 1 return onmidelijk
@@ -8,33 +10,32 @@
 // daarna slide je de window en voeg je het volgende element toe en subract je
 // het eerste element van de vorige window O(N)
 double findMaxAverage(int *nums, int numsSize, int k) {
-  if (k == 0) {
-
-    return 0;
-  }
-  if (k == 1) {
-    // fetch biggest element out of the array
+  if (k == 0 || numsSize == 0) {
     return 0;
   }
 
   int firstElementPreviousWindow = 0;
   double solution = 0;
-  double highestMaximumAverage = 0;
-  for (int i = 0; i < numsSize; i++) {
+  double highestMaximumAverage = -10000;
+
+  for (int i = 0; i < k; i++) {
+    solution += nums[i];
+  }
+
+  highestMaximumAverage = solution;
+
+  for (int i = k; i < numsSize; i++) {
     // eens i == k -> subract eerste element en voeg laatste toe;
 
-    if (i >= k) {
-      solution -= nums[firstElementPreviousWindow];
-      solution += nums[i];
+    solution += nums[i] - nums[firstElementPreviousWindow];
 
-      firstElementPreviousWindow++;
-    } else {
-      solution += nums[i];
-    }
+    firstElementPreviousWindow++;
+
     if (solution > highestMaximumAverage) {
+      printf("solution -- %f \n", solution);
       highestMaximumAverage = solution;
     }
   }
 
-  return highestMaximumAverage;
+  return round(highestMaximumAverage / k * 100000) / 100000.0;
 }

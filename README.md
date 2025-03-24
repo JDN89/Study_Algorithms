@@ -8,11 +8,6 @@
 - [grind 75](https://www.techinterviewhandbook.org/grind75)
 - [Neetcode](https://neetcode.io/roadmap)
 
-## Goal
-As a self taught developer I haven't gotten a deep understanding of data structures yet. This is something I need to learn, because how else can I write fast code, when I don't know which data stucture to use in which situation.
-
-I'll implement the data structure in C, because it gives me a deeper understaning of the inner workings of the structure.
-
 ## Data Structures
 
 - [Big O cheat sheet](https://www.bigocheatsheet.com/)
